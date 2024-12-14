@@ -1,0 +1,10 @@
+C:\Users\MSPROD\source\repos\CursoLogicaNelio\AppGestao\AppGestao\bin\Debug\AppGestao.exe.config
+C:\Users\MSPROD\source\repos\CursoLogicaNelio\AppGestao\AppGestao\bin\Debug\AppGestao.exe
+C:\Users\MSPROD\source\repos\CursoLogicaNelio\AppGestao\AppGestao\bin\Debug\AppGestao.pdb
+C:\Users\MSPROD\source\repos\CursoLogicaNelio\AppGestao\AppGestao\obj\Debug\AppGestao.csproj.AssemblyReference.cache
+C:\Users\MSPROD\source\repos\CursoLogicaNelio\AppGestao\AppGestao\obj\Debug\AppGestao.Formulario.resources
+C:\Users\MSPROD\source\repos\CursoLogicaNelio\AppGestao\AppGestao\obj\Debug\AppGestao.Properties.Resources.resources
+C:\Users\MSPROD\source\repos\CursoLogicaNelio\AppGestao\AppGestao\obj\Debug\AppGestao.csproj.GenerateResource.cache
+C:\Users\MSPROD\source\repos\CursoLogicaNelio\AppGestao\AppGestao\obj\Debug\AppGestao.csproj.CoreCompileInputs.cache
+C:\Users\MSPROD\source\repos\CursoLogicaNelio\AppGestao\AppGestao\obj\Debug\AppGestao.exe
+C:\Users\MSPROD\source\repos\CursoLogicaNelio\AppGestao\AppGestao\obj\Debug\AppGestao.pdb
