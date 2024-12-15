@@ -47,14 +47,21 @@
             this.labelUser.Size = new System.Drawing.Size(43, 13);
             this.labelUser.TabIndex = 0;
             this.labelUser.Text = "Usuario";
-            this.labelUser.Click += new System.EventHandler(this.label1_Click);
             // 
             // userText
             // 
+            this.userText.BackColor = System.Drawing.SystemColors.Window;
+            this.userText.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.userText.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.userText.ForeColor = System.Drawing.SystemColors.MenuText;
             this.userText.Location = new System.Drawing.Point(12, 25);
             this.userText.Name = "userText";
             this.userText.Size = new System.Drawing.Size(348, 20);
             this.userText.TabIndex = 1;
+            this.userText.TextChanged += new System.EventHandler(this.userText_TextChanged);
+            this.userText.Enter += new System.EventHandler(this.userText_Enter);
+            this.userText.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.userText_KeyPress);
+            this.userText.Leave += new System.EventHandler(this.userText_Leave);
             // 
             // passowordLabel
             // 
@@ -74,6 +81,8 @@
             this.passwordTxt.Size = new System.Drawing.Size(348, 20);
             this.passwordTxt.TabIndex = 3;
             this.passwordTxt.UseSystemPasswordChar = true;
+            this.passwordTxt.Enter += new System.EventHandler(this.passwordTxt_Enter);
+            this.passwordTxt.Leave += new System.EventHandler(this.passwordTxt_Leave);
             // 
             // Login
             // 
@@ -112,7 +121,7 @@
             this.Name = "Formulario";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "A3TERNUS -Sistema de Gestão";
+            this.Text = "A3TERNUS -Gestão de Clientes";
             this.Load += new System.EventHandler(this.Formulario_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
