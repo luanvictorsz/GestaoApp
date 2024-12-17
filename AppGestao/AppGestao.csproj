@@ -49,28 +49,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cadastro.cs" />
-    <Compile Include="Menu.cs">
+    <Compile Include="Models\Cadastro.cs" />
+    <Compile Include="Views\Menu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu.Designer.cs">
+    <Compile Include="Views\Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
-    <Compile Include="InterfaceProject.cs">
+    <Compile Include="Views\InterfaceProject.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="InterfaceProject.Designer.cs">
+    <Compile Include="Views\InterfaceProject.Designer.cs">
       <DependentUpon>InterfaceProject.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="InterfaceProject.pt-BR.resx">
+    <EmbeddedResource Include="Views\InterfaceProject.pt-BR.resx">
       <DependentUpon>InterfaceProject.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu.resx">
+    <EmbeddedResource Include="Views\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="InterfaceProject.resx">
+    <EmbeddedResource Include="Views\InterfaceProject.resx">
       <DependentUpon>InterfaceProject.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

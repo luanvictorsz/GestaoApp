@@ -20,6 +20,24 @@ namespace AppGestao
             serviceBox.SelectedIndex = 0;
         }
 
+        private void Listar()
+        {
+            listName.Items.Clear();
+
+            foreach (Cadastro cadastro in servico)
+            {
+                listName.Items.Add(cadastro.Nome);
+                listService.Items.Add(cadastro.Servico);
+                status.Items.Add(cadastro.Finalizado);
+            }
+        }
+
+        private void btnClean_Click(object sender, System.EventArgs e)
+        {
+            txtNome.Text = "";
+            serviceBox.Text = "";
+        }
+
         private void btnInsert_Click(object sender, EventArgs e)
         {
             int index = -1;
@@ -52,17 +70,6 @@ namespace AppGestao
                 return;
             }
 
-            char finalizado;
-
-            if (radiusSim.Checked)
-            {
-                finalizado = 'S';
-            }
-            else
-            {
-                finalizado = 'N';
-            }
-
             Cadastro cadastrar = new Cadastro();
 
             cadastrar.Nome = txtNome.Text;
@@ -81,21 +88,5 @@ namespace AppGestao
 
             Listar();
         }
-
-        private void Listar()
-        {
-            lista.Items.Clear();
-
-            foreach (Cadastro cadastro in servico)
-            {
-                lista.Items.Add(cadastro.Nome + " " + cadastro.Servico);
-            }
-        }
-
-        private void btnClean_Click(object sender, System.EventArgs e)
-        {
-
-        }
-
     }
 }

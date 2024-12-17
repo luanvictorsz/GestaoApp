@@ -42,7 +42,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.lista = new System.Windows.Forms.ListBox();
+            this.listName = new System.Windows.Forms.ListBox();
+            this.listService = new System.Windows.Forms.ListBox();
+            this.status = new System.Windows.Forms.ListBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -135,19 +140,53 @@
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
             // 
-            // lista
+            // listName
             // 
-            this.lista.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.lista.FormattingEnabled = true;
-            resources.ApplyResources(this.lista, "lista");
-            this.lista.Name = "lista";
+            this.listName.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.listName.FormattingEnabled = true;
+            resources.ApplyResources(this.listName, "listName");
+            this.listName.Name = "listName";
+            // 
+            // listService
+            // 
+            this.listService.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.listService.FormattingEnabled = true;
+            resources.ApplyResources(this.listService, "listService");
+            this.listService.Name = "listService";
+            // 
+            // status
+            // 
+            this.status.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.status.FormattingEnabled = true;
+            resources.ApplyResources(this.status, "status");
+            this.status.Name = "status";
+            // 
+            // label5
+            // 
+            resources.ApplyResources(this.label5, "label5");
+            this.label5.Name = "label5";
+            // 
+            // label6
+            // 
+            resources.ApplyResources(this.label6, "label6");
+            this.label6.Name = "label6";
+            // 
+            // label7
+            // 
+            resources.ApplyResources(this.label7, "label7");
+            this.label7.Name = "label7";
             // 
             // InterfaceProject
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Menu;
-            this.Controls.Add(this.lista);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.status);
+            this.Controls.Add(this.listService);
+            this.Controls.Add(this.listName);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
@@ -155,6 +194,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -170,8 +210,13 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListBox lista;
+        private System.Windows.Forms.ListBox listName;
         private System.Windows.Forms.ComboBox serviceBox;
         private System.Windows.Forms.Button btnClean;
+        private System.Windows.Forms.ListBox listService;
+        private System.Windows.Forms.ListBox status;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
     }
 }
