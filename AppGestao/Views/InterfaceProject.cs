@@ -6,7 +6,7 @@ namespace AppGestao
 {
     public partial class InterfaceProject : Form
     {
-        List<Cadastro> servico;
+        List<Cadastro> servico; 
         public InterfaceProject()
         {
             InitializeComponent();
@@ -75,6 +75,22 @@ namespace AppGestao
             Listar();
         }
 
+        private void deleteBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int indice = listName.SelectedIndex;
+                servico.RemoveAt(indice);
+                Listar();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Não existe item selecionado para exclusão",
+                                    "A3TERNUS - Gestão de Clientes",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Warning);
+            }
+        }
 
         private void Listar()
         {
@@ -88,13 +104,6 @@ namespace AppGestao
                 listService.Items.Add(cadastro.Servico);
                 status.Items.Add(cadastro.Finalizado);
             }
-        }
-
-        private void deleteBtn_Click(object sender, EventArgs e)
-        {
-            int indice = listName.SelectedIndex;
-            servico.RemoveAt(indice);
-            Listar();
         }
     }
 }
