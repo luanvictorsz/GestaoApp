@@ -245,28 +245,28 @@
   <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="button2.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="deleteBtn.Location" type="System.Drawing.Point, System.Drawing">
     <value>98, 225</value>
   </data>
-  <data name="button2.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="deleteBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>80, 23</value>
   </data>
-  <data name="button2.TabIndex" type="System.Int32, mscorlib">
+  <data name="deleteBtn.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
   </data>
-  <data name="button2.Text" xml:space="preserve">
+  <data name="deleteBtn.Text" xml:space="preserve">
     <value>Excluir</value>
   </data>
-  <data name="&gt;&gt;button2.Name" xml:space="preserve">
-    <value>button2</value>
+  <data name="&gt;&gt;deleteBtn.Name" xml:space="preserve">
+    <value>deleteBtn</value>
   </data>
-  <data name="&gt;&gt;button2.Type" xml:space="preserve">
+  <data name="&gt;&gt;deleteBtn.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;button2.Parent" xml:space="preserve">
+  <data name="&gt;&gt;deleteBtn.Parent" xml:space="preserve">
     <value>groupBox1</value>
   </data>
-  <data name="&gt;&gt;button2.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;deleteBtn.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
   <data name="btnInsert.Location" type="System.Drawing.Point, System.Drawing">

@@ -16,20 +16,6 @@ namespace AppGestao
             serviceBox.Items.Add("Emoticons");
             serviceBox.Items.Add("Character Design");
             serviceBox.Items.Add("Arte para Games");
-
-            serviceBox.SelectedIndex = 0;
-        }
-
-        private void Listar()
-        {
-            listName.Items.Clear();
-
-            foreach (Cadastro cadastro in servico)
-            {
-                listName.Items.Add(cadastro.Nome);
-                listService.Items.Add(cadastro.Servico);
-                status.Items.Add(cadastro.Finalizado);
-            }
         }
 
         private void btnClean_Click(object sender, System.EventArgs e)
@@ -70,22 +56,44 @@ namespace AppGestao
                 return;
             }
 
-            Cadastro cadastrar = new Cadastro();
+            Cadastro c = new Cadastro();
 
-            cadastrar.Nome = txtNome.Text;
-            cadastrar.Servico = serviceBox.Text;
+            c.Nome = txtNome.Text;
+            c.Servico = serviceBox.Text;
 
             if (index < 0)
             {
-                servico.Add(cadastrar);
+                servico.Add(c);
             }
             else
             {
-                servico[index] = cadastrar;
+                servico[index] = c;
             }
 
             btnClean_Click(btnClean, EventArgs.Empty);
 
+            Listar();
+        }
+
+
+        private void Listar()
+        {
+            listName.Items.Clear();
+            listService.Items.Clear();
+            status.Items.Clear();
+
+            foreach (Cadastro cadastro in servico)
+            {
+                listName.Items.Add(cadastro.Nome);
+                listService.Items.Add(cadastro.Servico);
+                status.Items.Add(cadastro.Finalizado);
+            }
+        }
+
+        private void deleteBtn_Click(object sender, EventArgs e)
+        {
+            int indice = listName.SelectedIndex;
+            servico.RemoveAt(indice);
             Listar();
         }
     }
