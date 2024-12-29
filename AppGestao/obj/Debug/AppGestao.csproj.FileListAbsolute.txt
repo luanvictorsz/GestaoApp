@@ -22,3 +22,4 @@ C:\Users\MSPROD\source\repos\AppGestao\AppGestao\obj\Debug\AppGestao.InterfacePr
 C:\Users\MSPROD\source\repos\AppGestao\AppGestao\obj\Debug\AppGestao.InterfaceProject.pt-BR.resources
 C:\Users\MSPROD\source\repos\AppGestao\AppGestao\obj\Debug\pt-BR\AppGestao.resources.dll
 C:\Users\MSPROD\source\repos\AppGestao\AppGestao\bin\Debug\pt-BR\AppGestao.resources.dll
+C:\Users\MSPROD\source\repos\AppGestao\AppGestao\obj\Debug\AppGestao.Views.registering.resources

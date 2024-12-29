@@ -33,8 +33,9 @@
             this.userText = new System.Windows.Forms.TextBox();
             this.passowordLabel = new System.Windows.Forms.Label();
             this.passwordTxt = new System.Windows.Forms.TextBox();
-            this.Login = new System.Windows.Forms.Button();
-            this.Cancelar = new System.Windows.Forms.Button();
+            this.LoginBtn = new System.Windows.Forms.Button();
+            this.ExitBtn = new System.Windows.Forms.Button();
+            this.RegisterBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelUser
@@ -84,25 +85,35 @@
             this.passwordTxt.Enter += new System.EventHandler(this.passwordTxt_Enter);
             this.passwordTxt.Leave += new System.EventHandler(this.passwordTxt_Leave);
             // 
-            // Login
+            // LoginBtn
             // 
-            this.Login.Location = new System.Drawing.Point(285, 115);
-            this.Login.Name = "Login";
-            this.Login.Size = new System.Drawing.Size(75, 23);
-            this.Login.TabIndex = 4;
-            this.Login.Text = "Login";
-            this.Login.UseVisualStyleBackColor = true;
-            this.Login.Click += new System.EventHandler(this.Login_Click);
+            this.LoginBtn.Location = new System.Drawing.Point(285, 115);
+            this.LoginBtn.Name = "LoginBtn";
+            this.LoginBtn.Size = new System.Drawing.Size(75, 23);
+            this.LoginBtn.TabIndex = 4;
+            this.LoginBtn.Text = "Login";
+            this.LoginBtn.UseVisualStyleBackColor = true;
+            this.LoginBtn.Click += new System.EventHandler(this.Login_Click);
             // 
-            // Cancelar
+            // ExitBtn
             // 
-            this.Cancelar.Location = new System.Drawing.Point(204, 115);
-            this.Cancelar.Name = "Cancelar";
-            this.Cancelar.Size = new System.Drawing.Size(75, 23);
-            this.Cancelar.TabIndex = 5;
-            this.Cancelar.Text = "Cancelar";
-            this.Cancelar.UseVisualStyleBackColor = true;
-            this.Cancelar.Click += new System.EventHandler(this.Cancelar_Click);
+            this.ExitBtn.Location = new System.Drawing.Point(12, 115);
+            this.ExitBtn.Name = "ExitBtn";
+            this.ExitBtn.Size = new System.Drawing.Size(75, 23);
+            this.ExitBtn.TabIndex = 5;
+            this.ExitBtn.Text = "Sair";
+            this.ExitBtn.UseVisualStyleBackColor = true;
+            this.ExitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
+            // 
+            // RegisterBtn
+            // 
+            this.RegisterBtn.Location = new System.Drawing.Point(204, 115);
+            this.RegisterBtn.Name = "RegisterBtn";
+            this.RegisterBtn.Size = new System.Drawing.Size(75, 23);
+            this.RegisterBtn.TabIndex = 6;
+            this.RegisterBtn.Text = "Cadastrar";
+            this.RegisterBtn.UseVisualStyleBackColor = true;
+            this.RegisterBtn.Click += new System.EventHandler(this.RegisterBtn_Click);
             // 
             // Formulario
             // 
@@ -110,8 +121,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(372, 150);
-            this.Controls.Add(this.Cancelar);
-            this.Controls.Add(this.Login);
+            this.Controls.Add(this.RegisterBtn);
+            this.Controls.Add(this.ExitBtn);
+            this.Controls.Add(this.LoginBtn);
             this.Controls.Add(this.passwordTxt);
             this.Controls.Add(this.passowordLabel);
             this.Controls.Add(this.userText);
@@ -134,8 +146,9 @@
         private System.Windows.Forms.TextBox userText;
         private System.Windows.Forms.Label passowordLabel;
         private System.Windows.Forms.TextBox passwordTxt;
-        private System.Windows.Forms.Button Login;
-        private System.Windows.Forms.Button Cancelar;
+        private System.Windows.Forms.Button LoginBtn;
+        private System.Windows.Forms.Button ExitBtn;
+        private System.Windows.Forms.Button RegisterBtn;
     }
 }
 

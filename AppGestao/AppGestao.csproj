@@ -49,7 +49,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\Conexao.cs" />
+    <Compile Include="Entities\Login.cs" />
+    <Compile Include="Entities\LoginComandos.cs" />
     <Compile Include="Models\Cadastro.cs" />
+    <Compile Include="Models\Controller.cs" />
     <Compile Include="Views\Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,6 +68,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\Register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Register.Designer.cs">
+      <DependentUpon>Register.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Views\InterfaceProject.pt-BR.resx">
       <DependentUpon>InterfaceProject.cs</DependentUpon>
     </EmbeddedResource>
@@ -82,6 +92,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\Register.resx">
+      <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

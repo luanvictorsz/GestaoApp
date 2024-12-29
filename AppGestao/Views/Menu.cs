@@ -1,4 +1,7 @@
-﻿using System;
+﻿using AppGestao.Views;
+using System;
+using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -6,33 +9,32 @@ namespace AppGestao
 {
     public partial class Formulario : Form
     {
+        SqlConnection Conexao = new SqlConnection(@"Data Source=DESKTOP-T48JM37\\MSSQLSERVER01;Initial Catalog=LoginGestao;Integrated Security=True;Encrypt=False");
+
         public Formulario()
         {
             InitializeComponent();
         }
 
-        private void Formulario_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void Login_Click(object sender, EventArgs e)
         {
+            Conexao.Open();
+            string query = "SELECT * FROM Usuario WHERE Username = '" + userText.Text + "' AND Password = '" + passwordTxt.Text + "'";
+            
+            SqlDataAdapter sda = new SqlDataAdapter(query, Conexao);
+            DataTable dataTable = new DataTable();
+            sda.Fill(dataTable);
+
             try
             {
-                string user = userText.Text.ToUpper();
+                if (dataTable.Rows.Count == 1)
+                {
 
-                if (user.Equals("ADMIN"))
-                {
                     MessageBox.Show("Bem vindo ao sistema da A3TERNUS",
-                                    "A3TERNUS - Sistema de Gestão");
+                                            "A3TERNUS - Sistema de Gestão");
                     InterfaceProject project = new InterfaceProject();
-                    this.Visible = false;
+                    this.Hide();
                     project.Show();
-                }
-                else if (user.Equals(""))
-                {
-                    MessageBox.Show("Por Favor, Preencha os campos");
                 }
                 else
                 {
@@ -42,19 +44,14 @@ namespace AppGestao
                                     MessageBoxIcon.Error);
                 }
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
-
+                MessageBox.Show("Usuario Desconhecido",
+                                    "A3TERNUS - Gestão de Clientes",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Error);
             }
-        }
 
-        private void Cancelar_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void userText_TextChanged(object sender, EventArgs e)
-        {
 
         }
 
@@ -94,6 +91,22 @@ namespace AppGestao
                 userText.SelectionLength = userText.Text.Length;
                 userText.Focus();
             }
+
+        }
+
+        private void ExitBtn_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void RegisterBtn_Click(object sender, EventArgs e)
+        {
+            registering registering = new registering();
+            registering.Show();
+        }
+
+        private void userText_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }
