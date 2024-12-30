@@ -49,11 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\Conexao.cs" />
-    <Compile Include="Entities\Login.cs" />
-    <Compile Include="Entities\LoginComandos.cs" />
     <Compile Include="Models\Cadastro.cs" />
-    <Compile Include="Models\Controller.cs" />
     <Compile Include="Views\Menu.cs">
       <SubType>Form</SubType>
     </Compile>

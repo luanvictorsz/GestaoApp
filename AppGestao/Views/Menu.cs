@@ -45,8 +45,6 @@ namespace AppGestao
                 passwordTxt.Text = "";
                 userText.Select();
             }
-
-
         }
 
         private void userText_Enter(object sender, EventArgs e)
@@ -99,9 +97,5 @@ namespace AppGestao
             registering.Show();
         }
 
-        private void userText_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
