@@ -134,7 +134,6 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "A3TERNUS -Gestão de Clientes";
-            this.Load += new System.EventHandler(this.Formulario_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

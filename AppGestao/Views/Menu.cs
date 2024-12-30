@@ -9,8 +9,6 @@ namespace AppGestao
 {
     public partial class Formulario : Form
     {
-        SqlConnection Conexao = new SqlConnection(@"Data Source=DESKTOP-T48JM37\\MSSQLSERVER01;Initial Catalog=LoginGestao;Integrated Security=True;Encrypt=False");
-
         public Formulario()
         {
             InitializeComponent();
@@ -18,38 +16,34 @@ namespace AppGestao
 
         private void Login_Click(object sender, EventArgs e)
         {
+            SqlConnection Conexao = new SqlConnection(@"Data Source=DESKTOP-T48JM37\MSSQLSERVER01;Initial Catalog=LoginGestao;Integrated Security=True;Encrypt=False;");
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = Conexao;
             Conexao.Open();
+
             string query = "SELECT * FROM Usuario WHERE Username = '" + userText.Text + "' AND Password = '" + passwordTxt.Text + "'";
-            
-            SqlDataAdapter sda = new SqlDataAdapter(query, Conexao);
-            DataTable dataTable = new DataTable();
-            sda.Fill(dataTable);
 
-            try
+            cmd = new SqlCommand(query, Conexao);
+            SqlDataReader sdr = cmd.ExecuteReader();
+
+            if (sdr.Read() == true)
             {
-                if (dataTable.Rows.Count == 1)
-                {
-
-                    MessageBox.Show("Bem vindo ao sistema da A3TERNUS",
-                                            "A3TERNUS - Sistema de Gestão");
-                    InterfaceProject project = new InterfaceProject();
-                    this.Hide();
-                    project.Show();
-                }
-                else
-                {
-                    MessageBox.Show("Usuario Desconhecido",
-                                    "A3TERNUS - Gestão de Clientes",
-                                    MessageBoxButtons.OK,
-                                    MessageBoxIcon.Error);
-                }
+                MessageBox.Show("Bem vindo ao sistema da A3TERNUS",
+                                        "A3TERNUS - Sistema de Gestão");
+                InterfaceProject project = new InterfaceProject();
+                this.Hide();
+                Conexao.Close();
+                project.Show();
             }
-            catch(Exception ex)
+            else
             {
                 MessageBox.Show("Usuario Desconhecido",
                                     "A3TERNUS - Gestão de Clientes",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Error);
+                userText.Text = "";
+                passwordTxt.Text = "";
+                userText.Select();
             }
 
 
