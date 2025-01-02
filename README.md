@@ -4,4 +4,4 @@
 
 <h3>Projeto em desenvolvimento...</h3>
 <em>Aplicar sistema de Registro e Login</em></br>
-<em>Salvar cadastros em um banco de dados</em>
+<em>Salvar modificações no banco de dados SQL Server</em>
