@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.regLoginText = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.passowordTxt = new System.Windows.Forms.TextBox();
             this.ConfirmPasswordTxt = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.registerBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -46,13 +46,13 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Login";
             // 
-            // textBox1
+            // regLoginText
             // 
-            this.textBox1.Location = new System.Drawing.Point(15, 25);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(370, 20);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.regLoginText.Location = new System.Drawing.Point(15, 25);
+            this.regLoginText.Name = "regLoginText";
+            this.regLoginText.Size = new System.Drawing.Size(370, 20);
+            this.regLoginText.TabIndex = 1;
+            this.regLoginText.TextChanged += new System.EventHandler(this.regLoginText_TextChanged);
             // 
             // label2
             // 
@@ -86,26 +86,27 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Confirmar Senha";
             // 
-            // button1
+            // registerBtn
             // 
-            this.button1.Location = new System.Drawing.Point(12, 130);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Cadastrar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.registerBtn.Location = new System.Drawing.Point(12, 130);
+            this.registerBtn.Name = "registerBtn";
+            this.registerBtn.Size = new System.Drawing.Size(75, 23);
+            this.registerBtn.TabIndex = 6;
+            this.registerBtn.Text = "Cadastrar";
+            this.registerBtn.UseVisualStyleBackColor = true;
+            this.registerBtn.Click += new System.EventHandler(this.registerBtn_Click);
             // 
             // registering
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(397, 165);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.registerBtn);
             this.Controls.Add(this.ConfirmPasswordTxt);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.passowordTxt);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.regLoginText);
             this.Controls.Add(this.label1);
             this.Name = "registering";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -118,11 +119,11 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox regLoginText;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox passowordTxt;
         private System.Windows.Forms.TextBox ConfirmPasswordTxt;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button registerBtn;
     }
 }

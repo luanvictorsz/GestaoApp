@@ -49,6 +49,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LoginGestaoDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LoginGestaoDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Models\Cadastro.cs" />
     <Compile Include="Views\Menu.cs">
       <SubType>Form</SubType>
@@ -91,6 +96,17 @@
     <EmbeddedResource Include="Views\Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="LoginGestaoDataSet.xsc">
+      <DependentUpon>LoginGestaoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="LoginGestaoDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LoginGestaoDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LoginGestaoDataSet.xss">
+      <DependentUpon>LoginGestaoDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

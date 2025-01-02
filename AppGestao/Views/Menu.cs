@@ -83,7 +83,6 @@ namespace AppGestao
                 userText.SelectionLength = userText.Text.Length;
                 userText.Focus();
             }
-
         }
 
         private void ExitBtn_Click(object sender, EventArgs e)
@@ -96,6 +95,5 @@ namespace AppGestao
             registering registering = new registering();
             registering.Show();
         }
-
     }
 }
