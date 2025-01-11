@@ -75,19 +75,29 @@ namespace AppGestao
 
         private void deleteBtn_Click(object sender, EventArgs e)
         {
-            try
-            {
-                int indice = listName.SelectedIndex;
-                servico.RemoveAt(indice);
-                Listar();
-            }
-            catch (Exception)
+            if (listName.SelectedIndex == -1)
             {
                 MessageBox.Show("Não existe item selecionado para exclusão",
-                                    "A3TERNUS - Gestão de Clientes",
-                                    MessageBoxButtons.OK,
-                                    MessageBoxIcon.Warning);
+                                "A3TERNUS - Gestão de Clientes",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning);
+                return;
             }
+
+            string nome = listName.SelectedItem.ToString();
+            string connectionString = "Data Source=DESKTOP-T48JM37\\MSSQLSERVER01;Initial Catalog=LoginGestao;Integrated Security=True;Encrypt=False;";
+            using (var connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                string query = "DELETE FROM Cadastro WHERE Nome = @Nome";
+                using (var command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Nome", nome);
+                    command.ExecuteNonQuery();
+                }
+            }
+
+            Listar();
         }
 
         private void Listar()
