@@ -96,13 +96,24 @@ namespace AppGestao
             listService.Items.Clear();
             status.Items.Clear();
 
-            foreach (Cadastro cadastro in servico)
+            string connectionString = "Data Source=DESKTOP-T48JM37\\MSSQLSERVER01;Initial Catalog=LoginGestao;Integrated Security=True;Encrypt=False;";
+            using (var connection = new SqlConnection(connectionString))
             {
-                listName.Items.Add(cadastro.Nome);
-                listService.Items.Add(cadastro.Servico);
-                status.Items.Add(cadastro.Finalizado);
+                connection.Open();
+                string query = "SELECT Nome, Servico, Finalizado FROM Cadastro";
+                using (var command = new SqlCommand(query, connection))
+                using (var reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        listName.Items.Add(reader["Nome"].ToString());
+                        listService.Items.Add(reader["Servico"].ToString());
+                        status.Items.Add(reader["Finalizado"].ToString());
+                    }
+                }
             }
         }
+
 
         private void txtNome_TextChanged(object sender, EventArgs e)
         {
