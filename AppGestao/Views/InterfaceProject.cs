@@ -1,12 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace AppGestao
 {
     public partial class InterfaceProject : Form
     {
-        List<Cadastro> servico; 
+        List<Cadastro> servico;
+        string connectionString = @"Data Source=DESKTOP-T48JM37\MSSQLSERVER01;Initial Catalog=LoginGestao;Integrated Security=True;Encrypt=False;";
+
         public InterfaceProject()
         {
             InitializeComponent();
@@ -26,22 +29,12 @@ namespace AppGestao
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
-            int index = -1;
-
-            foreach (Cadastro cadastro in servico)
-            {
-                if (cadastro.Nome == txtNome.Text)
-                {
-                    index = servico.IndexOf(cadastro);
-                }
-            }
-
             if (txtNome.Text == "")
             {
                 MessageBox.Show("Preencha o Campo Nome",
-                                    "A3TERNUS - Gestão de Clientes",
-                                    MessageBoxButtons.OK,
-                                    MessageBoxIcon.Warning);
+                                "A3TERNUS - Gestão de Clientes",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning);
                 txtNome.Focus();
                 return;
             }
@@ -49,31 +42,36 @@ namespace AppGestao
             if (serviceBox.Text == "")
             {
                 MessageBox.Show("Preencha o Campo de Serviço",
-                                    "A3TERNUS - Gestão de Clientes",
-                                    MessageBoxButtons.OK,
-                                    MessageBoxIcon.Warning);
+                                "A3TERNUS - Gestão de Clientes",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning);
                 serviceBox.Focus();
                 return;
             }
 
-            Cadastro c = new Cadastro();
-
-            c.Nome = txtNome.Text;
-            c.Servico = serviceBox.Text;
-
-            if (index < 0)
+            string connectionString = "Data Source=DESKTOP-T48JM37\\MSSQLSERVER01;Initial Catalog=LoginGestao;Integrated Security=True;Encrypt=False;";
+            using (var connection = new SqlConnection(connectionString))
             {
-                servico.Add(c);
-            }
-            else
-            {
-                servico[index] = c;
+                connection.Open();
+                string query = @"
+
+                INSERT INTO Cadastro (Nome, Servico, Finalizado) 
+                VALUES (@Nome, @Servico, @Finalizado)";
+
+                using (var command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Nome", txtNome.Text);
+                    command.Parameters.AddWithValue("@Servico", serviceBox.Text);
+                    command.Parameters.AddWithValue("@Finalizado", "Não");
+                    command.ExecuteNonQuery();
+                }
             }
 
             btnClean_Click(btnClean, EventArgs.Empty);
 
             Listar();
         }
+
 
         private void deleteBtn_Click(object sender, EventArgs e)
         {
@@ -104,6 +102,11 @@ namespace AppGestao
                 listService.Items.Add(cadastro.Servico);
                 status.Items.Add(cadastro.Finalizado);
             }
+        }
+
+        private void txtNome_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

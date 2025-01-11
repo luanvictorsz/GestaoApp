@@ -135,6 +135,7 @@
             // 
             resources.ApplyResources(this.txtNome, "txtNome");
             this.txtNome.Name = "txtNome";
+            this.txtNome.TextChanged += new System.EventHandler(this.txtNome_TextChanged);
             // 
             // label1
             // 
