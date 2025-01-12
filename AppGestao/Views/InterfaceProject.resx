@@ -119,7 +119,7 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnClean.Location" type="System.Drawing.Point, System.Drawing">
-    <value>299, 225</value>
+    <value>299, 184</value>
   </data>
   <data name="btnClean.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -168,7 +168,7 @@
     <value>True</value>
   </data>
   <data name="rdbFinalizadoNao.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 195</value>
+    <value>7, 154</value>
   </data>
   <data name="rdbFinalizadoNao.Size" type="System.Drawing.Size, System.Drawing">
     <value>45, 17</value>
@@ -195,7 +195,7 @@
     <value>True</value>
   </data>
   <data name="rdbFinalizadoSim.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 172</value>
+    <value>7, 131</value>
   </data>
   <data name="rdbFinalizadoSim.Size" type="System.Drawing.Size, System.Drawing">
     <value>42, 17</value>
@@ -222,7 +222,7 @@
     <value>True</value>
   </data>
   <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 154</value>
+    <value>4, 113</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
     <value>96, 13</value>
@@ -246,7 +246,7 @@
     <value>4</value>
   </data>
   <data name="deleteBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>98, 225</value>
+    <value>98, 184</value>
   </data>
   <data name="deleteBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>80, 23</value>
@@ -270,7 +270,7 @@
     <value>5</value>
   </data>
   <data name="btnInsert.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 225</value>
+    <value>7, 184</value>
   </data>
   <data name="btnInsert.Size" type="System.Drawing.Size, System.Drawing">
     <value>85, 23</value>
@@ -292,54 +292,6 @@
   </data>
   <data name="&gt;&gt;btnInsert.ZOrder" xml:space="preserve">
     <value>6</value>
-  </data>
-  <data name="dateTimePicker1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>97, 119</value>
-  </data>
-  <data name="dateTimePicker1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>279, 20</value>
-  </data>
-  <data name="dateTimePicker1.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="&gt;&gt;dateTimePicker1.Name" xml:space="preserve">
-    <value>dateTimePicker1</value>
-  </data>
-  <data name="&gt;&gt;dateTimePicker1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dateTimePicker1.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;dateTimePicker1.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1, 122</value>
-  </data>
-  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 13</value>
-  </data>
-  <data name="label3.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="label3.Text" xml:space="preserve">
-    <value>Data de Entrega</value>
-  </data>
-  <data name="&gt;&gt;label3.Name" xml:space="preserve">
-    <value>label3</value>
-  </data>
-  <data name="&gt;&gt;label3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>8</value>
   </data>
   <data name="label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -366,7 +318,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>7</value>
   </data>
   <data name="txtNome.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 43</value>
@@ -387,7 +339,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;txtNome.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>8</value>
   </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -414,13 +366,13 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>9</value>
   </data>
   <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 12</value>
   </data>
   <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 257</value>
+    <value>382, 217</value>
   </data>
   <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -441,7 +393,7 @@
     <value>6</value>
   </data>
   <data name="listName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 289</value>
+    <value>12, 252</value>
   </data>
   <data name="listName.Size" type="System.Drawing.Size, System.Drawing">
     <value>173, 147</value>
@@ -461,8 +413,11 @@
   <data name="&gt;&gt;listName.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <metadata name="listService.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="listService.Location" type="System.Drawing.Point, System.Drawing">
-    <value>184, 289</value>
+    <value>184, 252</value>
   </data>
   <data name="listService.Size" type="System.Drawing.Size, System.Drawing">
     <value>151, 147</value>
@@ -482,8 +437,11 @@
   <data name="&gt;&gt;listService.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <metadata name="status.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="status.Location" type="System.Drawing.Point, System.Drawing">
-    <value>332, 289</value>
+    <value>332, 252</value>
   </data>
   <data name="status.Size" type="System.Drawing.Size, System.Drawing">
     <value>62, 147</value>
@@ -507,7 +465,7 @@
     <value>True</value>
   </data>
   <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 273</value>
+    <value>13, 236</value>
   </data>
   <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
     <value>44, 13</value>
@@ -538,7 +496,7 @@
     <value>NoControl</value>
   </data>
   <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>181, 273</value>
+    <value>181, 236</value>
   </data>
   <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 13</value>
@@ -568,7 +526,7 @@
     <value>NoControl</value>
   </data>
   <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>336, 273</value>
+    <value>336, 236</value>
   </data>
   <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 13</value>
@@ -598,7 +556,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>406, 450</value>
+    <value>406, 410</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>

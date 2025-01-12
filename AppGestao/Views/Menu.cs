@@ -31,7 +31,7 @@ namespace AppGestao
                 MessageBox.Show("Bem vindo ao sistema da A3TERNUS",
                                         "A3TERNUS - Sistema de Gestão");
                 InterfaceProject project = new InterfaceProject();
-                this.Hide();
+                this.Close();
                 Conexao.Close();
                 project.Show();
             }
@@ -94,6 +94,11 @@ namespace AppGestao
         {
             registering registering = new registering();
             registering.Show();
+        }
+
+        private void userText_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -37,8 +37,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.deleteBtn = new System.Windows.Forms.Button();
             this.btnInsert = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -60,8 +58,6 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.deleteBtn);
             this.groupBox1.Controls.Add(this.btnInsert);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
-            this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtNome);
             this.groupBox1.Controls.Add(this.label1);
@@ -115,16 +111,6 @@
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.UseVisualStyleBackColor = true;
             this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
-            // 
-            // dateTimePicker1
-            // 
-            resources.ApplyResources(this.dateTimePicker1, "dateTimePicker1");
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            // 
-            // label3
-            // 
-            resources.ApplyResources(this.label3, "label3");
-            this.label3.Name = "label3";
             // 
             // label2
             // 
@@ -206,8 +192,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button deleteBtn;
         private System.Windows.Forms.Button btnInsert;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label label1;

@@ -59,6 +59,7 @@
             this.userText.Name = "userText";
             this.userText.Size = new System.Drawing.Size(348, 20);
             this.userText.TabIndex = 1;
+            this.userText.TextChanged += new System.EventHandler(this.userText_TextChanged);
             this.userText.Enter += new System.EventHandler(this.userText_Enter);
             this.userText.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.userText_KeyPress);
             this.userText.Leave += new System.EventHandler(this.userText_Leave);
