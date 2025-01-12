@@ -7,54 +7,39 @@ namespace AppGestao
 {
     public partial class InterfaceProject : Form
     {
-        List<Cadastro> servico;
-        string connectionString = @"Data Source=DESKTOP-T48JM37\MSSQLSERVER01;Initial Catalog=LoginGestao;Integrated Security=True;Encrypt=False;";
-
         public InterfaceProject()
         {
             InitializeComponent();
-            servico = new List<Cadastro>();
-
+            InitializeServiceBox();
+        }
+        private void InitializeServiceBox()
+        {
             serviceBox.Items.Add("Ilustração Digital");
             serviceBox.Items.Add("Emoticons");
             serviceBox.Items.Add("Character Design");
             serviceBox.Items.Add("Arte para Games");
         }
 
-        private void btnClean_Click(object sender, System.EventArgs e)
+        private void btnClean_Click(object sender, EventArgs e)
         {
             txtNome.Text = "";
             serviceBox.Text = "";
+            rdbFinalizadoSim.Checked = false;
+            rdbFinalizadoNao.Checked = false;
         }
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
-            if (txtNome.Text == "")
-            {
-                MessageBox.Show("Preencha o Campo Nome",
-                                "A3TERNUS - Gestão de Clientes",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Warning);
-                txtNome.Focus();
+            if (!ValidateFields())
                 return;
-            }
 
-            if (serviceBox.Text == "")
-            {
-                MessageBox.Show("Preencha o Campo de Serviço",
-                                "A3TERNUS - Gestão de Clientes",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Warning);
-                serviceBox.Focus();
-                return;
-            }
+            string finalizado = rdbFinalizadoSim.Checked ? "Sim" : "Não";
 
             string connectionString = "Data Source=DESKTOP-T48JM37\\MSSQLSERVER01;Initial Catalog=LoginGestao;Integrated Security=True;Encrypt=False;";
             using (var connection = new SqlConnection(connectionString))
             {
                 connection.Open();
                 string query = @"
-
                 INSERT INTO Cadastro (Nome, Servico, Finalizado) 
                 VALUES (@Nome, @Servico, @Finalizado)";
 
@@ -62,16 +47,14 @@ namespace AppGestao
                 {
                     command.Parameters.AddWithValue("@Nome", txtNome.Text);
                     command.Parameters.AddWithValue("@Servico", serviceBox.Text);
-                    command.Parameters.AddWithValue("@Finalizado", "Não");
+                    command.Parameters.AddWithValue("@Finalizado", finalizado);
                     command.ExecuteNonQuery();
                 }
             }
 
             btnClean_Click(btnClean, EventArgs.Empty);
-
             Listar();
         }
-
 
         private void deleteBtn_Click(object sender, EventArgs e)
         {
@@ -124,10 +107,38 @@ namespace AppGestao
             }
         }
 
-
-        private void txtNome_TextChanged(object sender, EventArgs e)
+        private bool ValidateFields()
         {
+            if (string.IsNullOrWhiteSpace(txtNome.Text))
+            {
+                MessageBox.Show("Preencha o Campo Nome",
+                                "A3TERNUS - Gestão de Clientes",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning);
+                txtNome.Focus();
+                return false;
+            }
 
+            if (string.IsNullOrWhiteSpace(serviceBox.Text))
+            {
+                MessageBox.Show("Preencha o Campo de Serviço",
+                                "A3TERNUS - Gestão de Clientes",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning);
+                serviceBox.Focus();
+                return false;
+            }
+
+            if (!rdbFinalizadoSim.Checked && !rdbFinalizadoNao.Checked)
+            {
+                MessageBox.Show("Selecione se o projeto está finalizado",
+                                "A3TERNUS - Gestão de Clientes",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning);
+                return false;
+            }
+
+            return true;
         }
     }
 }

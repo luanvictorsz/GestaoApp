@@ -32,8 +32,8 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnClean = new System.Windows.Forms.Button();
             this.serviceBox = new System.Windows.Forms.ComboBox();
-            this.radiusNao = new System.Windows.Forms.RadioButton();
-            this.radiusSim = new System.Windows.Forms.RadioButton();
+            this.rdbFinalizadoNao = new System.Windows.Forms.RadioButton();
+            this.rdbFinalizadoSim = new System.Windows.Forms.RadioButton();
             this.label4 = new System.Windows.Forms.Label();
             this.deleteBtn = new System.Windows.Forms.Button();
             this.btnInsert = new System.Windows.Forms.Button();
@@ -55,8 +55,8 @@
             // 
             this.groupBox1.Controls.Add(this.btnClean);
             this.groupBox1.Controls.Add(this.serviceBox);
-            this.groupBox1.Controls.Add(this.radiusNao);
-            this.groupBox1.Controls.Add(this.radiusSim);
+            this.groupBox1.Controls.Add(this.rdbFinalizadoNao);
+            this.groupBox1.Controls.Add(this.rdbFinalizadoSim);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.deleteBtn);
             this.groupBox1.Controls.Add(this.btnInsert);
@@ -82,20 +82,20 @@
             resources.ApplyResources(this.serviceBox, "serviceBox");
             this.serviceBox.Name = "serviceBox";
             // 
-            // radiusNao
+            // rdbFinalizadoNao
             // 
-            resources.ApplyResources(this.radiusNao, "radiusNao");
-            this.radiusNao.Checked = true;
-            this.radiusNao.Name = "radiusNao";
-            this.radiusNao.TabStop = true;
-            this.radiusNao.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.rdbFinalizadoNao, "rdbFinalizadoNao");
+            this.rdbFinalizadoNao.Checked = true;
+            this.rdbFinalizadoNao.Name = "rdbFinalizadoNao";
+            this.rdbFinalizadoNao.TabStop = true;
+            this.rdbFinalizadoNao.UseVisualStyleBackColor = true;
             // 
-            // radiusSim
+            // rdbFinalizadoSim
             // 
-            resources.ApplyResources(this.radiusSim, "radiusSim");
-            this.radiusSim.Name = "radiusSim";
-            this.radiusSim.TabStop = true;
-            this.radiusSim.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.rdbFinalizadoSim, "rdbFinalizadoSim");
+            this.rdbFinalizadoSim.Name = "rdbFinalizadoSim";
+            this.rdbFinalizadoSim.TabStop = true;
+            this.rdbFinalizadoSim.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
@@ -135,7 +135,6 @@
             // 
             resources.ApplyResources(this.txtNome, "txtNome");
             this.txtNome.Name = "txtNome";
-            this.txtNome.TextChanged += new System.EventHandler(this.txtNome_TextChanged);
             // 
             // label1
             // 
@@ -202,8 +201,8 @@
 
         #endregion
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radiusNao;
-        private System.Windows.Forms.RadioButton radiusSim;
+        private System.Windows.Forms.RadioButton rdbFinalizadoNao;
+        private System.Windows.Forms.RadioButton rdbFinalizadoSim;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button deleteBtn;
         private System.Windows.Forms.Button btnInsert;

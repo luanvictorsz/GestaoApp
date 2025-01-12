@@ -164,58 +164,58 @@
   <data name="&gt;&gt;serviceBox.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="radiusNao.AutoSize" type="System.Boolean, mscorlib">
+  <data name="rdbFinalizadoNao.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="radiusNao.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="rdbFinalizadoNao.Location" type="System.Drawing.Point, System.Drawing">
     <value>7, 195</value>
   </data>
-  <data name="radiusNao.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="rdbFinalizadoNao.Size" type="System.Drawing.Size, System.Drawing">
     <value>45, 17</value>
   </data>
-  <data name="radiusNao.TabIndex" type="System.Int32, mscorlib">
+  <data name="rdbFinalizadoNao.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
   </data>
-  <data name="radiusNao.Text" xml:space="preserve">
+  <data name="rdbFinalizadoNao.Text" xml:space="preserve">
     <value>Não</value>
   </data>
-  <data name="&gt;&gt;radiusNao.Name" xml:space="preserve">
-    <value>radiusNao</value>
+  <data name="&gt;&gt;rdbFinalizadoNao.Name" xml:space="preserve">
+    <value>rdbFinalizadoNao</value>
   </data>
-  <data name="&gt;&gt;radiusNao.Type" xml:space="preserve">
+  <data name="&gt;&gt;rdbFinalizadoNao.Type" xml:space="preserve">
     <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;radiusNao.Parent" xml:space="preserve">
+  <data name="&gt;&gt;rdbFinalizadoNao.Parent" xml:space="preserve">
     <value>groupBox1</value>
   </data>
-  <data name="&gt;&gt;radiusNao.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;rdbFinalizadoNao.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="radiusSim.AutoSize" type="System.Boolean, mscorlib">
+  <data name="rdbFinalizadoSim.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="radiusSim.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="rdbFinalizadoSim.Location" type="System.Drawing.Point, System.Drawing">
     <value>7, 172</value>
   </data>
-  <data name="radiusSim.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="rdbFinalizadoSim.Size" type="System.Drawing.Size, System.Drawing">
     <value>42, 17</value>
   </data>
-  <data name="radiusSim.TabIndex" type="System.Int32, mscorlib">
+  <data name="rdbFinalizadoSim.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
   </data>
-  <data name="radiusSim.Text" xml:space="preserve">
+  <data name="rdbFinalizadoSim.Text" xml:space="preserve">
     <value>Sim</value>
   </data>
-  <data name="&gt;&gt;radiusSim.Name" xml:space="preserve">
-    <value>radiusSim</value>
+  <data name="&gt;&gt;rdbFinalizadoSim.Name" xml:space="preserve">
+    <value>rdbFinalizadoSim</value>
   </data>
-  <data name="&gt;&gt;radiusSim.Type" xml:space="preserve">
+  <data name="&gt;&gt;rdbFinalizadoSim.Type" xml:space="preserve">
     <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;radiusSim.Parent" xml:space="preserve">
+  <data name="&gt;&gt;rdbFinalizadoSim.Parent" xml:space="preserve">
     <value>groupBox1</value>
   </data>
-  <data name="&gt;&gt;radiusSim.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;rdbFinalizadoSim.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
   <data name="label4.AutoSize" type="System.Boolean, mscorlib">
