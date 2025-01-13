@@ -46,11 +46,14 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.SystemColors.Menu;
+            this.groupBox1.Controls.Add(this.btnUpdate);
             this.groupBox1.Controls.Add(this.btnClean);
             this.groupBox1.Controls.Add(this.serviceBox);
             this.groupBox1.Controls.Add(this.rdbFinalizadoNao);
@@ -136,6 +139,7 @@
             // 
             // listService
             // 
+            this.listService.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.listService.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.listService.FormattingEnabled = true;
             resources.ApplyResources(this.listService, "listService");
@@ -162,6 +166,13 @@
             // 
             resources.ApplyResources(this.label7, "label7");
             this.label7.Name = "label7";
+            // 
+            // btnUpdate
+            // 
+            resources.ApplyResources(this.btnUpdate, "btnUpdate");
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // InterfaceProject
             // 
@@ -203,5 +214,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button btnUpdate;
     }
 }
