@@ -15,7 +15,7 @@ namespace AppGestao.Views
         private void registerBtn_Click(object sender, EventArgs e)
         {
 
-            string connectionString = "Data Source = DESKTOP - T48JM37\\MSSQLSERVER01; Initial Catalog = LoginGestao; Integrated Security = True; Encrypt = False; ";
+           string connectionString = "Data Source=DESKTOP-T48JM37\\MSSQLSERVER01;Initial Catalog=LoginGestao;Integrated Security=True;Encrypt=False;";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -29,6 +29,7 @@ namespace AppGestao.Views
                     command.Parameters.AddWithValue("@Password", passowordTxt.Text);
 
                     MessageBox.Show("Usuario Cadastrado com sucesso");
+                    this.Close();
                 }
                 catch (Exception)
                 {

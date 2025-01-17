@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InterfaceProject));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.btnClean = new System.Windows.Forms.Button();
             this.serviceBox = new System.Windows.Forms.ComboBox();
             this.rdbFinalizadoNao = new System.Windows.Forms.RadioButton();
@@ -46,7 +47,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.btnUpdate = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,6 +67,13 @@
             resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
+            // 
+            // btnUpdate
+            // 
+            resources.ApplyResources(this.btnUpdate, "btnUpdate");
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnClean
             // 
@@ -124,6 +131,7 @@
             // 
             resources.ApplyResources(this.txtNome, "txtNome");
             this.txtNome.Name = "txtNome";
+            this.txtNome.TextChanged += new System.EventHandler(this.txtNome_TextChanged);
             // 
             // label1
             // 
@@ -166,13 +174,6 @@
             // 
             resources.ApplyResources(this.label7, "label7");
             this.label7.Name = "label7";
-            // 
-            // btnUpdate
-            // 
-            resources.ApplyResources(this.btnUpdate, "btnUpdate");
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.UseVisualStyleBackColor = true;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // InterfaceProject
             // 

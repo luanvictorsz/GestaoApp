@@ -140,7 +140,7 @@ namespace AppGestao
             using (var connection = new SqlConnection(ConnectionString))
             using (var command = new SqlCommand(query, connection))
             {
-                connection.Open();
+                connection.Open();   
                 using (var reader = command.ExecuteReader())
                 {
                     readAction(reader);
@@ -151,6 +151,11 @@ namespace AppGestao
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             Listar();
+        }
+
+        private void txtNome_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

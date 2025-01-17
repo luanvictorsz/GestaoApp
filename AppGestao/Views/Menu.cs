@@ -1,6 +1,5 @@
 ﻿using AppGestao.Views;
 using System;
-using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Windows.Forms;
@@ -16,34 +15,55 @@ namespace AppGestao
 
         private void Login_Click(object sender, EventArgs e)
         {
-            SqlConnection Conexao = new SqlConnection(@"Data Source=DESKTOP-T48JM37\MSSQLSERVER01;Initial Catalog=LoginGestao;Integrated Security=True;Encrypt=False;");
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = Conexao;
-            Conexao.Open();
-
-            string query = "SELECT * FROM Usuario WHERE Username = '" + userText.Text + "' AND Password = '" + passwordTxt.Text + "'";
-
-            cmd = new SqlCommand(query, Conexao);
-            SqlDataReader sdr = cmd.ExecuteReader();
-
-            if (sdr.Read() == true)
+            // Validação básica dos campos
+            if (string.IsNullOrWhiteSpace(userText.Text) || string.IsNullOrWhiteSpace(passwordTxt.Text))
             {
-                MessageBox.Show("Bem vindo ao sistema da A3TERNUS",
-                                        "A3TERNUS - Sistema de Gestão");
-                InterfaceProject project = new InterfaceProject();
-                this.Hide();
-                Conexao.Close();
-                project.Show();
+                MessageBox.Show("Por favor, preencha todos os campos.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
-            else
+
+            string connectionString = @"Data Source=DESKTOP-T48JM37\MSSQLSERVER01;Initial Catalog=LoginGestao;Integrated Security=True;Encrypt=False;";
+            string query = "SELECT * FROM Usuario WHERE Username = @Username AND Password = @Password";
+
+            try
             {
-                MessageBox.Show("Usuario Desconhecido",
-                                    "A3TERNUS - Gestão de Clientes",
-                                    MessageBoxButtons.OK,
-                                    MessageBoxIcon.Error);
-                userText.Text = "";
-                passwordTxt.Text = "";
-                userText.Select();
+                using (SqlConnection conexao = new SqlConnection(connectionString))
+                {
+                    using (SqlCommand cmd = new SqlCommand(query, conexao))
+                    {
+                        // Adicionando parâmetros
+                        cmd.Parameters.AddWithValue("@Username", userText.Text);
+                        cmd.Parameters.AddWithValue("@Password", passwordTxt.Text);
+
+                        conexao.Open();
+
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                MessageBox.Show("Bem vindo ao sistema da A3TERNUS", "A3TERNUS - Sistema de Gestão");
+                                InterfaceProject project = new InterfaceProject();
+                                this.Hide();
+                                project.Show();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Usuário ou senha incorretos.", "Erro de Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                userText.Text = string.Empty;
+                                passwordTxt.Text = string.Empty;
+                                userText.Select();
+                            }
+                        }
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show($"Erro ao acessar o banco de dados: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erro inesperado: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -69,19 +89,11 @@ namespace AppGestao
 
         private void userText_KeyPress(object sender, KeyPressEventArgs e)
         {
-            int delete = (int)e.KeyChar;
-
-            if (!char.IsLetterOrDigit(e.KeyChar) && delete != 08)
+            if (!char.IsLetterOrDigit(e.KeyChar) && e.KeyChar != (char)8) // Permite apenas letras, números e tecla Backspace
             {
                 e.Handled = true;
-                MessageBox.Show("Apenas Letras ou Números",
-                                    "A3TERNUS - Gestão de Clientes",
-                                    MessageBoxButtons.OK,
-                                    MessageBoxIcon.Warning);
-
-                userText.SelectionStart = 0;
-                userText.SelectionLength = userText.Text.Length;
-                userText.Focus();
+                MessageBox.Show("Apenas Letras ou Números", "A3TERNUS - Gestão de Clientes", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                userText.SelectAll();
             }
         }
 
@@ -98,7 +110,7 @@ namespace AppGestao
 
         private void userText_TextChanged(object sender, EventArgs e)
         {
-
+            // Pode ser deixado em branco ou implementado para outras funcionalidades
         }
     }
 }
